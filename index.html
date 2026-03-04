@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI提示词宝库 - 200+即用型提示词 | 持续更新至1000+</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        .badge {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 18px 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(255,107,107,0.4);
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255,107,107,0.5);
+        }
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid white;
+        }
+        .features {
+            background: white;
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .features .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .feature-card {
+            padding: 30px;
+            border-radius: 15px;
+            background: #f8f9fa;
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        .update-banner {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .update-banner h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .pricing {
+            background: white;
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .pricing h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .pricing .subtitle {
+            color: #666;
+            margin-bottom: 40px;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .pricing-card {
+            padding: 40px 30px;
+            border-radius: 20px;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+        .pricing-card.popular {
+            border-color: #667eea;
+            background: linear-gradient(135deg, #667eea10 0%, #764ba210 100%);
+            position: relative;
+            transform: scale(1.05);
+        }
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #667eea;
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #667eea;
+            margin: 20px 0;
+        }
+        .price .original {
+            font-size: 1.2rem;
+            color: #999;
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+        .price span {
+            font-size: 1rem;
+            color: #999;
+        }
+        .pricing-card ul {
+            list-style: none;
+            text-align: left;
+            margin: 30px 0;
+        }
+        .pricing-card li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .pricing-card li:before {
+            content: "✓";
+            color: #4caf50;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .buy-button {
+            display: block;
+            background: #667eea;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .buy-button:hover {
+            background: #764ba2;
+        }
+        .guarantee {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .guarantee h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        .preview {
+            background: white;
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+        .preview h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+        .prompt-example {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            padding: 40px 20px;
+        }
+        .countdown {
+            background: #ff6b6b;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+            .pricing-card.popular {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <div class="badge">🔥 MVP首发特惠</div>
+            <h1>AI提示词宝库</h1>
+            <div class="subtitle">200+即用型提示词 | 每周更新 | 3个月达1000+</div>
+            <p>不是网上随便搜到的通用模板，每个都经过实战验证。复制粘贴就能用，让你的AI效率提升10倍。</p>
+            <div class="countdown">⏰ 首发特惠倒计时：限时5折，仅剩50个名额</div>
+            <a href="https://paypal.me/alexzhangai/19" class="cta-button">立即抢购 - $19起</a>
+            <a href="#preview" class="cta-button secondary">免费预览</a>
+        </section>
+
+        <section class="features">
+            <h2>为什么选择我们的提示词库？</h2>
+            <div class="subtitle">已有200+精选提示词，每周新增50+，持续更新至1000+</div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🎯 即拿即用</h3>
+                    <p>每个提示词都经过实战验证，复制粘贴即可使用，无需反复调试。小白也能立即上手。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📚 分类清晰</h3>
+                    <p>5大主题分类，覆盖内容创作、商业分析、编程开发、营销增长、个人效率全场景。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💡 案例配套</h3>
+                    <p>每个提示词附带使用示例和参数说明，清楚知道什么时候用、怎么用。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔄 持续更新</h3>
+                    <p>每周新增50+提示词，3个月内达到1000+。一次购买，终身免费更新。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔍 可搜索</h3>
+                    <p>专业版提供Notion数据库格式，支持关键词搜索和标签筛选，快速找到所需。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>👥 社区支持</h3>
+                    <p>加入专属社群，与其他用户交流使用心得，获取最新提示词技巧。</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="update-banner">
+            <h3>📈 持续更新承诺</h3>
+            <p>当前：200+ 提示词 | 3月11日：300+ | 3月18日：500+ | 4月初：1000+</p>
+            <p>购买后每周收到更新通知，新提示词自动加入你的库</p>
+        </div>
+
+        <section class="preview" id="preview">
+            <h2>免费预览 - 提示词示例</h2>
+            <h3>小红书种草文案生成器</h3>
+            <div class="prompt-example">
+请为以下产品写一篇小红书风格的种草文案：
+产品：[产品名称]
+核心卖点：[卖点1, 卖点2, 卖点3]
+目标人群：[人群描述]
+要求：
+- 标题要有吸引力，使用emoji
+- 正文分点说明，语言亲切自然
+- 结尾引导互动
+- 添加相关话题标签
+            </div>
+            
+            <h3>竞品分析框架</h3>
+            <div class="prompt-example">
+请为以下产品制定竞品分析框架：
+我的产品：[产品描述]
+主要竞品：[竞品列表]
+分析维度：[维度列表]
+要求：
+- 设计对比表格模板
+- 每个维度有评估标准
+- 包含SWOT分析框架
+- 输出可执行的建议
+            </div>
+
+            <h3>代码优化建议</h3>
+            <div class="prompt-example">
+请优化以下代码：
+```[代码]```
+优化目标：[性能/可读性/可维护性]
+要求：
+- 指出当前问题
+- 提供优化后的代码
+- 说明优化理由
+- 分析复杂度变化
+            </div>
+            
+            <p style="text-align: center; margin-top: 30px; color: #666;">这只是3个示例，完整版包含200+个精心设计的提示词...</p>
+        </section>
+
+        <section class="pricing" id="pricing">
+            <h2>首发特惠价（限时5折）</h2>
+            <div class="subtitle">MVP首发期间享受5折优惠，价格将随内容增加而上调</div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>基础版</h3>
+                    <div class="price">$19 <span class="original">$39</span></div>
+                    <ul>
+                        <li>200+精选提示词（PDF）</li>
+                        <li>5大主题分类</li>
+                        <li>基础使用指南</li>
+                        <li>每周更新通知</li>
+                        <li>邮件支持</li>
+                    </ul>
+                    <a href="https://paypal.me/alexzhangai/19" class="buy-button">立即购买</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">最受欢迎</div>
+                    <h3>专业版</h3>
+                    <div class="price">$39 <span class="original">$79</span></div>
+                    <ul>
+                        <li>200+完整提示词库</li>
+                        <li>Notion数据库（可搜索）</li>
+                        <li>详细使用指南</li>
+                        <li>50+实战案例</li>
+                        <li>每周更新自动同步</li>
+                        <li>专属社群准入</li>
+                        <li>优先邮件支持</li>
+                    </ul>
+                    <a href="https://paypal.me/alexzhangai/39" class="buy-button">立即购买</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>企业版</h3>
+                    <div class="price">$79 <span class="original">$159</span></div>
+                    <ul>
+                        <li>专业版全部内容</li>
+                        <li>1对1咨询（30分钟）</li>
+                        <li>团队使用授权（最多10人）</li>
+                        <li>3个定制化提示词</li>
+                        <li>终身免费更新</li>
+                        <li>微信/电话支持</li>
+                    </ul>
+                    <a href="https://paypal.me/alexzhangai/79" class="buy-button">立即购买</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="guarantee">
+            <h3>🛡️ 30天无理由退款保证</h3>
+            <p>如果我们的产品没有帮助你提升AI使用效率，30天内全额退款，无需任何解释。</p>
+        </section>
+
+        <footer class="footer">
+            <p>© 2026 AI提示词宝库 | 由 Alex Zhang 精心制作</p>
+            <p>联系邮箱: budingmore@gmail.com</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">购买后24小时内发送产品下载链接</p>
+        </footer>
+    </div>
+</body>
+</html>
